@@ -36,7 +36,7 @@ export default function LoginPage() {
       className="bg-white h-full flex items-center justify-center"
       style={{ height: "calc(100vh - 68px)" }}
     >
-      <div className="max-w-lg w-full mx-auto bg-darkGreen text-white p-8 mx-3 shadow-lg rounded-lg">
+      <div className="max-w-lg w-full bg-darkGreen text-white p-8 mx-3 shadow-lg rounded-lg">
         <div className="text-center mb-6">
           <h1 className="text-3xl font-bold">Welcome Back!</h1>
           <p className="text-white mt-2">Log in to your account</p>
