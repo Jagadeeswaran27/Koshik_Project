@@ -3,17 +3,20 @@ import { useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import { useContext } from "react";
 import { AppContext } from "../context/AppContext";
+
 export default function LoginPage() {
   const { setLogin, isLoggedIn } = useContext(AppContext);
   const emailRef = useRef();
   const passwordRef = useRef();
   const navigate = useNavigate();
+
   useEffect(() => {
     const check = sessionStorage.getItem("isLoggedIn");
     if (check === "true") {
       navigate("/");
     }
   }, []);
+
   async function handleLogin(e) {
     e.preventDefault();
     if (
@@ -27,12 +30,13 @@ export default function LoginPage() {
       alert("Invalid Credentials");
     }
   }
+
   return (
     <div
-      className="bg-white flex items-center justify-center h-full"
+      className="bg-white h-full flex items-center justify-center"
       style={{ height: "calc(100vh - 68px)" }}
     >
-      <div className="max-w-lg w-1/4 mx-auto bg-darkGreen text-white p-8 shadow-lg rounded-lg">
+      <div className="max-w-lg w-full mx-auto bg-darkGreen text-white p-8 mx-3 shadow-lg rounded-lg">
         <div className="text-center mb-6">
           <h1 className="text-3xl font-bold">Welcome Back!</h1>
           <p className="text-white mt-2">Log in to your account</p>

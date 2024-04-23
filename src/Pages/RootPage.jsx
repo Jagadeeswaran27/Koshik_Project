@@ -21,14 +21,19 @@ export default function RootPage() {
   console.log(isLoggedIn);
   return (
     <main>
-      <div className="flex justify-around py-5 text-xl sticky left-0 top-0 w-full bg-green text-white">
-        <NavLink to="/">Pharmacy Management System</NavLink>
+      <div className="flex justify-around items-center py-5 text-xl sticky left-0 top-0 w-full bg-green text-white">
+        <NavLink to="/" className="text-lg md:text-xl">
+          Pharmacy Management System
+        </NavLink>
         {isLoggedIn ? (
-          <p onClick={handleLogout} className="cursor-pointer">
+          <p
+            onClick={handleLogout}
+            className="cursor-pointer text-sm md:text-xl"
+          >
             Logout
           </p>
         ) : (
-          <NavLink to="/login" className="cursor-pointer">
+          <NavLink to="/login" className="cursor-pointer text-sm md:text-xl">
             Login
           </NavLink>
         )}

@@ -11,7 +11,7 @@ export default function HomePage() {
       className="bg-gray-100 h-full flex items-center justify-center"
       style={{ height: "calc(100vh - 68px)" }}
     >
-      <div className="max-w-md mx-auto bg-darkGreen text-white p-8 shadow-lg rounded-lg">
+      <div className="max-w-md bg-darkGreen mx-3 text-white p-8 shadow-lg rounded-lg">
         <div className="text-center mb-6">
           <h1 className="text-3xl font-bold">Welcome to Our Company</h1>
           <p className=" mt-2">
