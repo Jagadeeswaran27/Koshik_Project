@@ -64,7 +64,6 @@ const ProductDetails = () => {
               type="number"
               id="quantity"
               name="quantity"
-              value={quantity}
               min="1"
               max={medicine.quantity}
               onChange={(e) => handleQuantityChange(parseInt(e.target.value))}
