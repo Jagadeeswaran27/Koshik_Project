@@ -37,7 +37,10 @@ export default function HomePage() {
         {isLoggedIn !== "true" && (
           <div className="mt-4 text-center">
             <p className="">Don't have an account?</p>
-            <NavLink className="text-white font-semibold underline">
+            <NavLink
+              to="/signup"
+              className="text-white font-semibold underline"
+            >
               Sign Up Here
             </NavLink>
           </div>

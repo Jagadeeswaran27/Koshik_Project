@@ -8,6 +8,7 @@ import { useState } from "react";
 import OrderPage from "./Pages/OrderPage";
 import ProductDetails from "./Pages/ProductDetailsPage";
 import Payment from "./Pages/PaymentPage";
+import SignupPage from "./Pages/SIgnupPage";
 export default function App() {
   const [state, setState] = useState({
     isLoggedIn: false,
@@ -24,6 +25,10 @@ export default function App() {
         {
           path: "/login",
           element: <LoginPage />,
+        },
+        {
+          path: "/signup",
+          element: <SignupPage />,
         },
         {
           path: "/medicines",
