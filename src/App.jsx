@@ -6,6 +6,8 @@ import MedicinesPage from "./Pages/MedicinesPage";
 import { AppContext } from "./context/AppContext";
 import { useState } from "react";
 import OrderPage from "./Pages/OrderPage";
+import ProductDetails from "./Pages/ProductDetailsPage";
+import Payment from "./Pages/PaymentPage";
 export default function App() {
   const [state, setState] = useState({
     isLoggedIn: false,
@@ -28,8 +30,16 @@ export default function App() {
           element: <MedicinesPage />,
         },
         {
-          path: "/medicine/:id",
+          path: "/order/:id",
           element: <OrderPage />,
+        },
+        {
+          path: "/medicine/:id/desc",
+          element: <ProductDetails />,
+        },
+        {
+          path: "/payment/:id",
+          element: <Payment />,
         },
       ],
     },

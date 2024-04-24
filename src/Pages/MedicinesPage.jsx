@@ -6,7 +6,16 @@ const MedicinesPage = () => {
   const [medicineList, setMedicineList] = useState([]);
 
   useEffect(() => {
-    setMedicineList(medicinesData);
+    const storedMedicineList = JSON.parse(
+      sessionStorage.getItem("medicineList")
+    );
+
+    if (storedMedicineList) {
+      setMedicineList(storedMedicineList);
+    } else {
+      setMedicineList(medicinesData);
+      sessionStorage.setItem("medicineList", JSON.stringify(medicinesData));
+    }
   }, []);
 
   return (
@@ -43,7 +52,7 @@ const MedicinesPage = () => {
               </p>
               <p className="text-sm text-gray-700">{medicine.description}</p>
               <NavLink
-                to={`/medicine/${medicine.id}`}
+                to={`/medicine/${medicine.id}/desc`}
                 className="block mt-4 text-center bg-green hover:bg-darkGreen text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline transition duration-300"
               >
                 Order Now!

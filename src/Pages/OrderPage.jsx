@@ -4,10 +4,10 @@ import medicinesData from "../../medicinesData";
 export default function OrderPage() {
   const { id } = useParams();
 
-  // Find the medicine that matches the id from params
   const selectedMedicine = medicinesData.find(
     (medicine) => medicine.id === parseInt(id)
   );
+  const paymentMethod = sessionStorage.getItem("payment");
 
   return (
     <div
@@ -27,6 +27,9 @@ export default function OrderPage() {
               </p>
               <p className="text-gray-600 mb-4">
                 Description: {selectedMedicine.description}
+              </p>
+              <p className="text-gray-600 mb-4">
+                Payment Method: {paymentMethod.toLocaleUpperCase()}
               </p>
             </div>
           </div>

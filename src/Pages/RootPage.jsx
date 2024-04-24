@@ -11,14 +11,12 @@ export default function RootPage() {
       setLogin();
     }
   }, []);
-  console.log(isLoggedIn);
   const navigate = useNavigate();
   function handleLogout() {
     sessionStorage.setItem("isLoggedIn", "false");
     removeLogin();
     navigate("/login");
   }
-  console.log(isLoggedIn);
   return (
     <main>
       <div className="flex justify-around items-center py-5 text-xl sticky left-0 top-0 w-full bg-green text-white">
